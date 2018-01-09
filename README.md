@@ -1,5 +1,9 @@
 # PlotBot
 
+<p align="center">
+  <img src="images/bot.jpg">
+</p>
+
 In this activity, more challenging than the last, you will build a Twitter bot that sends out visualized sentiment analysis of a Twitter account's recent tweets.
 
 Visit [https://twitter.com/PlotBot5](https://twitter.com/PlotBot5) for an example of what your script should do.
@@ -10,7 +14,17 @@ For example, when a user tweets, __"@PlotBot Analyze: @CNN,"__ it will trigger a
 
 A plot from the sentiment analysis is then tweeted to the PlotBot5 twitter feed. See below for examples of scatter plots you will generate:
 
-[insert images later]
+<p align="center">
+  <img src="images/sample_1.png">
+</p>
+
+<p align="center">
+  <img src="images/sample_2.png">
+</p>
+
+<p align="center">
+  <img src="images/sample_3.png">
+</p>
 
 Hints, requirements, and considerations:
 
