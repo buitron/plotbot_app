@@ -11,15 +11,15 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 
-# while True:
-#   time.sleep(60*2)
-trash_it = Twitter_Validator(api)
-change_it = Twitter_Checker(api)
+while True:
+    time.sleep(60 * 2)
+    trash_it = Twitter_Validator(api)
+    change_it = Twitter_Checker(api)
 
-mail_upgrade_it = trash_it.check_request()
+    mail_upgrade_it = trash_it.check_request()
 
-if mail_upgrade_it:
-    screen_name, user_name, tweet_id = change_it.search_request()
-    if screen_name:
-        success = Twitter_Plotter(api, screen_name, user_name, tweet_id)
-        success.send_it()
+    if mail_upgrade_it:
+        screen_name, user_name, tweet_id = change_it.search_request()
+        if screen_name:
+            success = Twitter_Plotter(api, screen_name, user_name, tweet_id)
+            success.send_it()
