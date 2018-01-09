@@ -11,19 +11,19 @@ class Twitter_Validator(object):
         self.api = api
 
     def check_request(self):
-        for tweet in tweepy.Cursor(self.api.search, q='@PlotBot6').items():
+        for tweet in tweepy.Cursor(self.api.search, q='@PlotBot7').items():
             tweet_id = tweet.id
             tweet_user_sn = tweet.user.screen_name
             tweet_user_name = tweet.user.name
             tweet_text = tweet.text
 
-            match = re.match('@plotbot6 analyze: @[a-z0-9_]*', tweet_text.lower())
+            match = re.match('@plotbot7 analyze: @[a-z0-9_]*', tweet_text.lower())
 
             if match:
                 return True
             else:
                 try:
-                    self.api.update_status(status="@{} Sorry {}, the query was not in the proper format, please send your query in the following format: [at]PlotBot6 Analyze: [at][screen_name to be analyzed]".format(tweet_user_sn, tweet_user_name), in_reply_to_status_id=tweet_id)
+                    self.api.update_status(status="@{} Sorry {}, the query was not in the proper format, please send your query in the following format: [at]PlotBot7 Analyze: [at][screen_name to be analyzed]".format(tweet_user_sn, tweet_user_name), in_reply_to_status_id=tweet_id)
                     return False
                 except tweepy.TweepError:
                     pass
@@ -59,7 +59,7 @@ class Twitter_Checker(object):
                 return tweet_analyze_sn
 
     def search_request(self):
-        for tweet in tweepy.Cursor(self.api.search, q='@PlotBot6').items():
+        for tweet in tweepy.Cursor(self.api.search, q='@PlotBot7').items():
             tweet_id = tweet.id
             tweet_user_sn = tweet.user.screen_name
             tweet_user_name = tweet.user.name
