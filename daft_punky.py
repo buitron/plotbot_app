@@ -121,5 +121,5 @@ class Twitter_Plotter(object):
     def send_it(self):
 
         img_file = self.plot_it()
-        self.api.update_with_media(img_file, status="New Tweet Analysis: {} (Thanks @{})".format(self.screen_name, self.user_name), in_reply_to_status_id=self.tweet_id)
+        self.api.update_with_media(img_file, status="New Tweet Analysis: {} (Thanks @{})".format(self.screen_name[1:], self.user_name), in_reply_to_status_id=self.tweet_id)
 
