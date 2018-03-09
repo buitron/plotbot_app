@@ -12,7 +12,7 @@ api = tweepy.API(auth)
 
 
 while True:
-    time.sleep(60 * 2)
+    time.sleep(60 * 5)
     trash_it = Twitter_Validator(api)
     change_it = Twitter_Checker(api)
 
